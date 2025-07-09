@@ -1,0 +1,148 @@
+# Cursor Rules
+
+## Instructions
+
+- Record fixes for mistakes or corrections to avoid repetition in the `Lessons` section.
+- Organize thoughts and plan steps before starting a task in the `Scratchpad` section.
+- Clear old tasks if necessary.
+- Use todo markers for progress tracking:
+  - `[X]` Completed tasks
+  - `[ ]` Pending tasks
+- Update Scratchpad after completing subtasks.
+- Reflect and plan after milestones for better task management.
+- Always refer to Scratchpad before planning the next step.
+
+## Lessons
+
+## Scratchpad
+
+### Ecommerce Website with Admin Dashboard Development Plan
+
+### Phase 1: Project Setup & Foundation
+- [ ] Initialize Next.js 15 project with TypeScript
+- [ ] Install and configure Shadcn UI components
+- [ ] Set up Tailwind CSS and custom theme
+- [ ] Configure ESLint and Prettier
+- [ ] Set up Git repository and initial commit
+- [ ] Create project structure and folder organization
+- [ ] Install core dependencies: Lucide, Zod, Zustand, Recharts, Resend, Uploadthing, Prisma, next-auth@beta, Stripe
+
+### Phase 2: Database & Authentication Setup
+- [ ] Set up PostgreSQL database (local/cloud)
+- [ ] Configure Prisma ORM with database schema
+- [ ] Design database schema for:
+  - Users (customers, admins)
+  - Products (categories, variants, inventory)
+  - Orders (order items, shipping, payments)
+  - Reviews and ratings
+  - Cart and wishlist
+- [ ] Set up next-auth@beta with multiple providers
+- [ ] Create authentication middleware and protected routes
+- [ ] Implement role-based access control (customer/admin)
+
+### Phase 3: Core Ecommerce Features
+- [ ] Create product listing page with filters and search
+- [ ] Implement product detail page with variants
+- [ ] Build shopping cart functionality with Zustand
+- [ ] Create checkout flow with Stripe integration
+- [ ] Implement order management system
+- [ ] Add user profile and order history
+- [ ] Create review and rating system
+- [ ] Build wishlist functionality
+
+### Phase 4: Admin Dashboard Development
+- [ ] Design admin dashboard layout with sidebar navigation
+- [ ] Create admin authentication and authorization
+- [ ] Build product management (CRUD operations)
+- [ ] Implement inventory management system
+- [ ] Create order management interface
+- [ ] Build customer management dashboard
+- [ ] Add analytics dashboard with Recharts
+- [ ] Implement sales reports and insights
+- [ ] Create category and attribute management
+
+### Phase 5: Advanced Features
+- [ ] Set up file upload with Uploadthing for product images
+- [ ] Implement email notifications with Resend
+- [ ] Create discount and coupon system
+- [ ] Build shipping and tax calculation
+- [ ] Add multi-language support
+- [ ] Implement SEO optimization
+- [ ] Create mobile-responsive design
+- [ ] Add real-time inventory updates
+
+### Phase 6: Payment & Security
+- [ ] Configure Stripe payment processing
+- [ ] Implement secure payment flow
+- [ ] Add payment webhook handling
+- [ ] Create refund and dispute management
+- [ ] Implement security best practices
+- [ ] Add input validation with Zod
+- [ ] Set up error handling and logging
+
+### Phase 7: Testing & Optimization
+- [ ] Write unit tests for core functionality
+- [ ] Perform integration testing
+- [ ] Optimize performance and loading times
+- [ ] Implement caching strategies
+- [ ] Add error boundaries and fallbacks
+- [ ] Test across different browsers and devices
+- [ ] Performance audit and optimization
+
+### Phase 8: Deployment & Production
+- [ ] Set up production database
+- [ ] Configure environment variables
+- [ ] Set up CI/CD pipeline
+- [ ] Deploy to production platform (Vercel/Netlify)
+- [ ] Configure domain and SSL
+- [ ] Set up monitoring and analytics
+- [ ] Create backup and recovery procedures
+
+### Technical Stack Details:
+- **Frontend**: Next.js 15, TypeScript, Tailwind CSS, Shadcn UI
+- **State Management**: Zustand
+- **Icons**: Lucide React
+- **Validation**: Zod
+- **Charts**: Recharts
+- **Email**: Resend
+- **File Upload**: Uploadthing
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: next-auth@beta
+- **Payments**: Stripe
+- **Styling**: Tailwind CSS with custom components
+
+### Key Features to Implement:
+1. **Customer Features**:
+   - Product browsing and search
+   - Shopping cart and checkout
+   - Order tracking
+   - User profiles
+   - Reviews and ratings
+   - Wishlist
+
+2. **Admin Features**:
+   - Product management
+   - Order management
+   - Customer management
+   - Analytics dashboard
+   - Inventory control
+   - Sales reports
+
+3. **Technical Features**:
+   - Responsive design
+   - SEO optimization
+   - Performance optimization
+   - Security measures
+   - Error handling
+   - Real-time updates
+
+### Development Guidelines:
+- Use TypeScript strictly for type safety
+- Follow Next.js 15 App Router patterns
+- Implement proper error boundaries
+- Use Zod for all form validation
+- Follow responsive design principles
+- Implement proper loading states
+- Use semantic HTML and accessibility features
+- Follow security best practices
+- Write clean, maintainable code with proper comments
