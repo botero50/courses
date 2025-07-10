@@ -1,8 +1,15 @@
-// Database configuration and Prisma client setup
-// This file will be configured when we set up Prisma
+import { PrismaClient } from '@prisma/client';
 
-export const db = {
-  // Prisma client will be initialized here
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
 };
+
+export const db =
+  globalForPrisma.prisma ??
+  new PrismaClient({
+    log: ['query'],
+  });
+
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = db;
 
 export default db; 

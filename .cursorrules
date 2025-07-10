@@ -28,14 +28,14 @@
 - [x] Install core dependencies: Lucide, Zod, Zustand, Recharts, Resend, Uploadthing, Prisma, next-auth@beta, Stripe
 
 ### Phase 2: Database & Authentication Setup ✅
-- [] Set up PostgreSQL database
-- [] Configure Prisma schema:
-  - [] User model
-  - [] Product model
-  - [] Category model
-  - [] Order model
-  - [] Review model
-  - [] Cart model
+- [x] Set up PostgreSQL database
+- [x] Configure Prisma schema:
+  - [x] User model
+  - [x] Product model
+  - [x] Category model
+  - [x] Order model
+  - [x] Review model
+  - [x] Cart model
 - [] Implement NextAuth.js authentication:
   - [] Email/Password
   - [] OAuth providers (Google, GitHub)
