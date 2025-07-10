@@ -3,6 +3,11 @@ import { hash } from "bcryptjs"
 import { db } from "@/app/lib/db"
 import { z } from "zod"
 
+// Add error handling for imports
+if (!db) {
+  throw new Error("Database connection not available")
+}
+
 const registerSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
@@ -11,6 +16,14 @@ const registerSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Validate request method
+    if (request.method !== 'POST') {
+      return NextResponse.json(
+        { error: "Method not allowed" },
+        { status: 405 }
+      )
+    }
+
     const body = await request.json()
     const { name, email, password } = registerSchema.parse(body)
 
@@ -54,8 +67,16 @@ export async function POST(request: NextRequest) {
     }
 
     console.error("Registration error:", error)
+    console.error("Error details:", {
+      name: error instanceof Error ? error.name : "Unknown",
+      message: error instanceof Error ? error.message : "Unknown error",
+      stack: error instanceof Error ? error.stack : undefined,
+    })
     return NextResponse.json(
-      { error: "Internal server error" },
+      { 
+        error: "Internal server error",
+        details: error instanceof Error ? error.message : "Unknown error"
+      },
       { status: 500 }
     )
   }
