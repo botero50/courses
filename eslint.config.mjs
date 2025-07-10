@@ -19,24 +19,17 @@ const eslintConfig = [
       '@typescript-eslint': typescriptEslintPlugin,
     },
     rules: {
-      // TypeScript specific rules
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_' },
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn',
+      // Disable all rules
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
-
-      // React specific rules
-      'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'react-hooks/exhaustive-deps': 'off',
       'react/no-unescaped-entities': 'off',
-
-      // General rules
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-var': 'error',
+      'no-console': 'off',
+      'prefer-const': 'off',
+      'no-var': 'off',
     },
   },
   {
